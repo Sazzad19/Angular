@@ -5,3 +5,17 @@
     <p>{{item.price}}</p>
 </div>
 <a routerLink="/shippingPrice">Shipping Price</a>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Name</label>
+        <input type="text" formControlName="name"/>
+    </div>
+
+    <div>
+        <label>Address</label>
+        <input type="text" formControlName="address"/>
+    </div>
+
+    <button type="submit" class="button">Purchase</button>
+</form>
